@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="login">
+        <h2 class="login" >Login</h2>
+        <label class="username" for="username">Username</label>
+        
+        
+
+        <div class="input-container">
+          <i class="ion-ios-person-outline icon"></i>
+          <span class="icon_person"><ion-icon name="person"></ion-icon></span>
+          <input type="text" placeholder="Enter Username" name="username" required >
+
+        </div>
+
+        <label class="password" for="password">Password</label>
+          <div class="input-container">
+            <i class="ion-ios-lock-outline icon"></i>
+            <span class="icon_lock"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" placeholder="Enter Password" name="login_password" id="login_password" required>
+            <span class="eye" onclick="myFunction()">
+                <ion-icon id="hide2" name="eye" class="open-eye"></ion-icon>
+                <ion-icon id="hide1" name="eye-off"></ion-icon>
+            </span>
+
+          </div>
+        
+
+          <div class="login-button-container">
+            <input type="submit" value="Login">
+            <i class="ion-ios-arrow-thin-right icon"></i>
+          </div>
+          <div class="login-link-container">
+            <p>Don't have an account? <a href="#" id="register-btn" onclick="document.getElementById('register').style.display='block';document.getElementById('login').style.display='none';document.getElementById('register-link-container').style.display='none';document.getElementById('login-link-container').style.display='block';">Register</a></p>
+          </div>
+      </form>
+
+      <form id="register" style="display:none">
+        <h2 class="register-color">Register</h2>
+        <label class="username" for="username">Username</label>
+        <div class="input-container">
+          <i class="ion-ios-person-outline icon"></i>
+          <span class="icon_person"><ion-icon name="person"></ion-icon></span>
+          <input type="text" placeholder="Enter Username" name="username" required>
+        </div>
+
+        <label class="password" for="password">Password</label>
+        <div class="input-container">
+          <i class="ion-ios-lock-outline icon"></i>
+          <span class="icon_lock"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" placeholder="Enter Password" name="password" required>
+        </div>
+
+        <label class="confirm-password" for="confirm-password">Confirm Password</label>
+        <div class="input-container">
+          <i class="ion-ios-lock-outline icon"></i>
+          <span class="icon_lock"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required>
+          <span class="eye" onclick="myFunction3()">
+            <ion-icon id="hide6" name="eye" class="open-eye"></ion-icon>
+            <ion-icon id="hide5" name="eye-off"></ion-icon>
+          </span>
+        </div>
+
+        <div class="button-container">
+          <input type="submit" value="Register">
+          <i class="ion-ios-arrow-thin-right icon"></i>
+        </div>
+
+        <div class="login-link-container" id="login-link-container">
+          <p class="have-account">Already have an account? <a href="#" id="login-btn" onclick="document.getElementById('login').style.display='block';document.getElementById('register').style.display='none';document.getElementById('register-link-container').style.display='block';document.getElementById('login-link-container').style.display='none';">Login</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("login_password");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+            if (x.type === "password") {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        function myFunction2() {
+            var x = document.getElementById("register_password");
+            var y = document.getElementById("hide3");
+            var z = document.getElementById("hide4");
+
+            if (x.type === "password") {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        function myFunction3() {
+          var x = document.getElementById("confirm_password");
+          var y = document.getElementById("hide5");
+          var z = document.getElementById("hide6");
+
+          if (x.type === "password") {
+            x.type = "text";
+            y.style.display = "block";
+            z.style.display = "none";
+          } else {
+            x.type = "password";
+            y.style.display = "none";
+            z.style.display = "block";
+          }
+          
+        }
+
+        
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

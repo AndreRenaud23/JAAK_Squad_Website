@@ -1,0 +1,315 @@
+
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 50px;
+}
+
+form {
+  background-color: transparent;
+
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(161, 158, 158, 0.2);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-container {
+  position: relative;
+}
+
+.username-shadow {
+  border: 3px solid white;
+}
+
+
+#password,
+.password,
+#username,
+.username,
+#email,
+.email,
+.register-color,
+.confirm-password {
+  color: white;
+}
+
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+input[type="submit"] {
+  background-color: #2a54fb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #2246d3;
+}
+
+.register {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.register a {
+  background-color: #2246d3;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+.login-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login-btns a {
+  background-color: #2246d3;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#login-btn {
+  color: rgb(43, 43, 255);
+  text-decoration: none;
+}
+
+#login-btn:hover {
+  color: rgb(43, 43, 185);
+  text-decoration: underline;
+}
+
+.login-btns a:hover {
+  background-color: #223eab;
+}
+
+.login-link-container {
+  color: white;
+  text-align: center;
+}
+
+#login_password {
+  color: white;
+}
+
+#register_password {
+    color: white;
+}
+
+#confirm_password {
+    color: white;
+}
+
+
+#login label[for="username"], #login label[for="password"], #register label[for="username"], #register label[for="email"], #register label[for="password"], #register label[for="confirm-password"] {
+  margin-left: 10px;
+}
+
+
+
+.input-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 38px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+  width: calc(100% - 0px);
+  padding-left: 50px;
+}
+
+.eye {
+  display: none;
+  margin-left: 15.5rem;
+}
+
+.eye :hover {
+  cursor: pointer;
+}
+
+.open-eye {
+  display: none;
+}
+
+::placeholder {
+  color: white;
+}
+
+/* HEADER! */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Poppins&family=Titillium+Web:wght@300&display=swap');
+
+
+* {
+  background: black;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+header {
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .2em;
+  border-bottom: 1px solid rgb(22, 20, 20);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.logo_title {
+  width: 150px;
+  height: auto;
+  display:inline-block;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em;
+  
+}
+
+nav ul li.dropdown {
+  position: relative;
+  
+}
+
+nav ul li.dropdown ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+
+}
+
+nav ul li.dropdown:hover ul {
+  display: block;
+}
+
+nav ul li.dropdown a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em;
+  margin-right: 2rem;
+}
+
+nav ul li.dropdown ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.person-icon {
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+
+
+.content {
+  padding: 1em;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+/* DONE WITH HEADER */ 

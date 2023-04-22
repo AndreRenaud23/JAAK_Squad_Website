@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home | Register</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="icon" href="/JAAK/images/JAAK SQUAD (2).png">
+  </head>
+  <header>
+    <div class="logo">
+      <a href="/JAAK/home_page/index.html"><img class="logo" src="/JAAK/images/JAAK SQUAD (2).png" alt="Logo"></a>
+      <a href="/JAAK/home_page/index.html"><img class="logo_title" src="/JAAK/images/7.png" alt="Logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/JAAK/home_page/index.html" class="header-option"><ion-icon id="house" name="home-outline"></ion-icon> Home</a></li>
+        <li><a href="/JAAK/jaak_merch_page/index.html" class="header-option"><ion-icon name="shirt-outline"></ion-icon> JAAK Merch</a></li>
+        <li class="dropdown">
+          <a href="#"><ion-icon name="person-circle" class="person-icon"></ion-icon> Account &#x25BC;</a>
+          <ul>
+            <li><a href="/JAAK/register_page/index.html">Register</a></li>
+            <li><a href="/JAAK/login_page/index.html">Login</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div class="container">
+      
+
+      <form id="register">
+        <h2 class="register-color">Register</h2>
+        <label class="username" for="username">Username</label>
+        <div class="input-container">
+          <i class="ion-ios-person-outline icon"></i>
+          <span class="icon_person"><ion-icon name="person" style="color: white;"></ion-icon></span>
+          <input type="text" placeholder="Enter Username" name="username" id="username" required  style="box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);">
+        </div>
+
+        <label class="email" for="email">Email</label>
+        <div class="input-container">
+          <i class="ion-ios-person-outline icon"></i>
+          <span class="icon_person"><ion-icon name="mail" style="color:white"></ion-icon></span>
+          <input type="text" placeholder="Enter Email" name="Email" id="Email" required  style="box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);">
+        </div>
+
+        <label class="password" for="password">Password</label>
+        <div class="input-container">
+          <i class="ion-ios-lock-outline icon"></i>
+          <span class="icon_lock"><ion-icon name="lock-closed" style="color: white;"></ion-icon></span>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required  style="box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);">
+          <span class="eye" onclick="myFunction1()">
+            <ion-icon id="hide1" name="eye" class="open-eye" style="color: white;"></ion-icon>
+            <ion-icon id="hide2" name="eye-off" style="color: white;"></ion-icon>
+          </span>
+        </div>
+
+        <label class="confirm-password" for="confirm-password">Confirm Password</label>
+        <div class="input-container">
+          <i class="ion-ios-lock-outline icon"></i>
+          <span class="icon_lock"><ion-icon name="lock-closed" style="color: white;"></ion-icon></span>
+          <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required  style="box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);">
+          <span class="eye" onclick="myFunction2()">
+            <ion-icon id="hide3" name="eye" class="open-eye" style="color: white;"></ion-icon>
+            <ion-icon id="hide4" name="eye-off" style="color: white;"></ion-icon>
+          </span>
+        </div>
+
+        <div class="button-container">
+          <input type="submit" value="Register">
+          <i class="ion-ios-arrow-thin-right icon"></i>
+        </div>
+
+        <div class="login-link-container" id="login-link-container">
+          <p class="have-account">Already have an account? <a href="/JAAK/login_page/index.html" id="login-btn">Login</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function myFunction1() {
+            var x = document.getElementById("password");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+            if (x.type === "password") {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        function myFunction2() {
+          var x = document.getElementById("confirm_password");
+          var y = document.getElementById("hide3");
+          var z = document.getElementById("hide4");
+
+          if (x.type === "password") {
+            x.type = "text";
+            y.style.display = "block";
+            z.style.display = "none";
+          } else {
+            x.type = "password";
+            y.style.display = "none";
+            z.style.display = "block";
+          }
+          
+        }
+
+        
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
