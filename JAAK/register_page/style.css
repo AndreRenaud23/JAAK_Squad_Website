@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+
 }
 
 
@@ -25,6 +26,7 @@ form {
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(161, 158, 158, 0.2);
   width: 400px;
+
 }
 
 h2 {
@@ -52,7 +54,7 @@ label {
 .password,
 #username,
 .username,
-#email,
+#Email,
 .email,
 .register-color,
 .confirm-password {
@@ -157,6 +159,18 @@ input[type="submit"]:hover {
 #confirm_password {
     color: white;
 }
+
+#password-error {
+  color: red;
+  font-style: italic;
+  font-weight: 100;
+  font-size: small;
+  align-items: center;
+  display: flex;
+  margin: 0px 0px 10px 0px;
+}
+
+
 
 
 #login label[for="username"], #login label[for="password"], #register label[for="username"], #register label[for="email"], #register label[for="password"], #register label[for="confirm-password"] {

@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/343ad50e66.js" crossorigin="anonymous"></script>
     <title>Home | Register</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link rel="icon" href="/JAAK/images/JAAK SQUAD (2).png">
+
   </head>
   <header>
     <div class="logo">
@@ -70,8 +72,17 @@
           </span>
         </div>
 
+        <div class="error_box">
+
+          <i class="fa-solid fa-triangle-exclamation" id="icon-password-error" style="color:white; display:none;"></i>
+          <div id="password-error"></div>
+
+        </div>
+
+        
+
         <div class="button-container">
-          <input type="submit" value="Register">
+          <input class="btn_reg" type="submit" value="Register">
           <i class="ion-ios-arrow-thin-right icon"></i>
         </div>
 
@@ -80,6 +91,88 @@
         </div>
       </form>
     </div>
+
+    <script>
+      const registerForm = document.querySelector('#register');
+      const usernameInput = document.querySelector('#username');
+      const passwordInput = document.querySelector('#password');
+      const confirmPasswordInput = document.querySelector('#confirm_password');
+      const passwordError = document.querySelector('#password-error');
+      const line1 = "• The passwords do not match!";
+      const line2 = "• The password must contain at least six characters!";
+      const line3 = "• The password must contain at least one capital letter!";
+      const line4 = "• The username needs to be at least three characters!";
+
+      registerForm.addEventListener('submit', (event) => {
+        //4
+        if ((passwordInput.value !== confirmPasswordInput.value) && (passwordInput.value.length < 6 ) && !(/[A-Z]/.test(passwordInput.value)) && (usernameInput.value.length < 3)) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line1}<br>${line2}<br>${line3}`;
+        }
+        //3
+        else if ((passwordInput.value !== confirmPasswordInput.value) && (passwordInput.value.length < 6 ) && !(/[A-Z]/.test(passwordInput.value))) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line1}<br>${line2}<br>${line3}`;
+        } else if ((passwordInput.value !== confirmPasswordInput.value) && (passwordInput.value.length < 6 ) && (usernameInput.value.length < 3)) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line1}<br>${line2}<br>${line4}`;
+        } else if ((passwordInput.value !== confirmPasswordInput.value) && (usernameInput.value.length < 3) && !(/[A-Z]/.test(passwordInput.value))) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line1}<br>${line3}<br>${line4}`;
+        } else if ((usernameInput.value.length < 3) && (passwordInput.value.length < 6 ) && !(/[A-Z]/.test(passwordInput.value))) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line2}<br>${line3}<br>${line4}`;
+        } 
+        //2
+        else if ((passwordInput.value !== confirmPasswordInput.value) && !(/[A-Z]/.test(passwordInput.value))) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line1}<br>${line3}`;
+
+        } else if ((passwordInput.value !== confirmPasswordInput.value) && (passwordInput.value.length < 6)) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line1}<br>${line2}`;
+
+        } else if (!(/[A-Z]/.test(passwordInput.value)) && (passwordInput.value.length < 6)) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line2}<br>${line3}`;
+
+        } else if ((passwordInput.value !== confirmPasswordInput.value) && (usernameInput.value.length < 3)) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line1}<br>${line4}`;
+
+        } else if ((passwordInput.value.length < 6 ) && (usernameInput.value.length < 3)) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line2}<br>${line4}`;
+
+        } else if (!(/[A-Z]/.test(passwordInput.value)) && (usernameInput.value.length < 3)) {
+          event.preventDefault();
+          passwordError.innerHTML = `${line3}<br>${line4}`;
+
+        } 
+        //1
+        else if (passwordInput.value !== confirmPasswordInput.value) {
+          event.preventDefault();
+          passwordError.textContent = line1;
+
+        } else if (passwordInput.value.length < 6) {
+          event.preventDefault();
+          passwordError.textContent = line2;
+        } else if (!(/[A-Z]/.test(passwordInput.value))) {
+          event.preventDefault();
+          passwordError.textContent = line3;
+        } else if (usernameInput.value.length < 3) {
+          event.preventDefault();
+          passwordError.textContent = line4;
+        }
+
+
+      });
+    </script>
+    
+
+    
+
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
